@@ -43,9 +43,14 @@ namespace ContosoBankBot
             return await this.customersTable.ToListAsync();
         }
 
-        public async Task AddTimeline(Customers timeline)
+        public async Task AddCustomer(Customers customer)
         {
-            await this.customersTable.InsertAsync(timeline);
+            await this.customersTable.InsertAsync(customer);
+        }
+
+        public async Task UpdateCustomer(Customers customer)
+        {
+            await this.customersTable.UpdateAsync(customer);
         }
 
 
